@@ -25,26 +25,26 @@
     <!-- Main Section Start -->
     <main class="flex mx-[50px]">
         <!-- Start Card Section -->
-        <div class="w-[60%] md:w-[70%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 ">
+        <div class="w-[55%] md:w-[70%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-10">
             <div class="card border-2 border-[#1111111c]">
                 <figure class="w-full pt-[20px] px-[20px] h-[206px]"><img src="/resource/images/triangle.png" alt="Shoes" /></figure>
                 <div class="card-body items-center">
-                    <h2 class="card-title font-bold text-[25px] text-[#414141]">Triangle</h2>
+                    <h2 id="Name" class="card-title font-bold text-[25px] text-[#414141]">Triangle</h2>
                     <div class="font-normal text-[16px] text-[#414141]">
-                         Area(A) = 0.5 x <span>b</span> x <span>h</span> 
+                         Area(A) = 0.5 x <span id="base-value">b</span> x <span id="hight-value">h</span> 
                     </div>
                     <div class="flex gap-[20px] mx-[20px] md:mx-[0px] lg:mx-[20px]">
                         <div class="flex w-[50%]">
-                            <input type="text" placeholder="b" class="input bg-[#f1f1f1] rounded-none mr-[5px] input-xs w-full" />
+                            <input id="triangle-base" type="text" placeholder="b" class="input bg-[#f1f1f1]  rounded-none mr-[5px] input-xs w-full border-0" />
                             <p class="font-normal text-[16px] text-[#414141]">cm</p>
                         </div>
                         <div class="flex w-[50%]">
-                            <input type="text" placeholder="h" class="input bg-[#f1f1f1]  rounded-none hover:border-none mr-[5px] input-xs w-full" />
+                            <input id="triangle-hight" type="text" placeholder="h" class="input bg-[#f1f1f1]  rounded-none mr-[5px] input-xs w-full border-0" />
                             <p class="font-normal text-[16px] text-[#414141]">cm</p>
                         </div>
                     </div>
                     <div class="card-actions w-full">
-                        <button class="btn mt-[10px] bg-[#1090d8] hover:bg-[#1090d8] w-full py-[5px] font-bold text-[20px] text-[#ffffff]">Calculate</button>
+                        <button onclick="triangleAreaCalculation()" class="btn mt-[10px] bg-[#1090d8] hover:bg-[#1090d8] w-full py-[5px] font-bold text-[20px] text-[#ffffff]">Calculate</button>
                     </div>
                 </div>
             </div>
@@ -52,17 +52,17 @@
             <div class="card border-2 border-[#1111111c]">
                 <figure class="w-full pt-[20px] px-[20px] h-[206px]"><img src="/resource/images/rectangle.png" alt="Shoes" /></figure>
                 <div class="card-body items-center">
-                    <h2 class="card-title font-bold text-[25px] text-[#414141]">Triangle</h2>
+                    <h2 class="card-title font-bold text-[25px] text-[#414141]">Rectangle</h2>
                     <div class="font-normal text-[16px] text-[#414141]">
                          Area(A) = 0.5 x <span>W</span> x <span>l</span> 
                     </div>
                     <div class="flex gap-[20px] mx-[20px] md:mx-[0px] lg:mx-[20px]">
                         <div class="flex w-[50%]">
-                            <input type="text" placeholder="w" class="input bg-[#f1f1f1] rounded-none mr-[5px] input-xs w-full" />
+                            <input type="text" placeholder="w" class="input bg-[#f1f1f1]  rounded-none mr-[5px] input-xs w-full border-0" />
                             <p class="font-normal text-[16px] text-[#414141]">cm</p>
                         </div>
                         <div class="flex w-[50%]">
-                            <input type="text" placeholder="l" class="input bg-[#f1f1f1]  rounded-none hover:border-none mr-[5px] input-xs w-full" />
+                            <input type="text" placeholder="l" class="input bg-[#f1f1f1]  rounded-none mr-[5px] input-xs w-full border-0" />
                             <p class="font-normal text-[16px] text-[#414141]">cm</p>
                         </div>
                     </div>
@@ -75,17 +75,17 @@
             <div class="card border-2 border-[#1111111c]">
                 <figure class="w-full pt-[20px] px-[20px] h-[206px]"><img src="/resource/images/parallelogram.png" alt="Shoes" /></figure>
                 <div class="card-body items-center">
-                    <h2 class="card-title font-bold text-[25px] text-[#414141]">Triangle</h2>
+                    <h2 class="card-title font-bold text-[25px] text-[#414141]">Parallelogram</h2>
                     <div class="font-normal text-[16px] text-[#414141]">
                          Area(A) = 0.5 x <span>b</span> x <span>h</span> 
                     </div>
                     <div class="flex gap-[20px] mx-[20px] md:mx-[0px] lg:mx-[20px]">
                         <div class="flex w-[50%]">
-                            <input type="text" placeholder="b" class="input bg-[#f1f1f1] rounded-none mr-[5px] input-xs w-full" />
+                            <input type="text" placeholder="b" class="input bg-[#f1f1f1] rounded-none mr-[5px] input-xs w-full border-0" />
                             <p class="font-normal text-[16px] text-[#414141]">cm</p>
                         </div>
                         <div class="flex w-[50%]">
-                            <input type="text" placeholder="h" class="input bg-[#f1f1f1]  rounded-none hover:border-none mr-[5px] input-xs w-full" />
+                            <input type="text" placeholder="h" class="input bg-[#f1f1f1]  rounded-none border-0 mr-[5px] input-xs w-full" />
                             <p class="font-normal text-[16px] text-[#414141]">cm</p>
                         </div>
                     </div>
@@ -98,17 +98,17 @@
             <div class="card border-2 border-[#1111111c]">
                 <figure class="w-full pt-[20px] px-[20px] h-[206px]"><img src="/resource/images/rhombus.png" alt="Shoes" /></figure>
                 <div class="card-body items-center">
-                    <h2 class="card-title font-bold text-[25px] text-[#414141]">Triangle</h2>
+                    <h2 class="card-title font-bold text-[25px] text-[#414141]">Rhomnus</h2>
                     <div class="font-normal text-[16px] text-[#414141]">
                          Area(A) = 0.5 x <span>d1</span> x <span>d2</span> 
                     </div>
                     <div class="flex gap-[20px] mx-[20px] md:mx-[0px] lg:mx-[20px]">
                         <div class="flex w-[50%]">
-                            <input type="text" placeholder="d1" class="input bg-[#f1f1f1] rounded-none mr-[5px] input-xs w-full" />
+                            <input type="text" placeholder="d1" class="input bg-[#f1f1f1] rounded-none mr-[5px] input-xs w-full border-0" />
                             <p class="font-normal text-[16px] text-[#414141]">cm</p>
                         </div>
                         <div class="flex w-[50%]">
-                            <input type="text" placeholder="d2" class="input bg-[#f1f1f1]  rounded-none hover:border-none mr-[5px] input-xs w-full" />
+                            <input type="text" placeholder="d2" class="input bg-[#f1f1f1]  rounded-none border-0 mr-[5px] input-xs w-full" />
                             <p class="font-normal text-[16px] text-[#414141]">cm</p>
                         </div>
                     </div>
@@ -121,17 +121,17 @@
             <div class="card border-2 border-[#1111111c]"> 
                 <figure class="w-full pt-[20px] px-[20px] h-[206px]"><img src="/resource/images/pentagon.png" alt="Shoes" /></figure>
                 <div class="card-body items-center">
-                    <h2 class="card-title font-bold text-[25px] text-[#414141]">Triangle</h2>
+                    <h2 class="card-title font-bold text-[25px] text-[#414141]">Pentagon</h2>
                     <div class="font-normal text-[16px] text-[#414141]">
                          Area(A) = 0.5 x <span>p</span> x <span>b</span> 
                     </div>
                     <div class="flex gap-[20px] mx-[20px] md:mx-[0px] lg:mx-[20px]">
                         <div class="flex w-[50%]">
-                            <input type="text" placeholder="p" class="input bg-[#f1f1f1] rounded-none mr-[5px] input-xs w-full" />
+                            <input type="text" placeholder="p" class="input bg-[#f1f1f1] rounded-none mr-[5px] input-xs w-full border-0" />
                             <p class="font-normal text-[16px] text-[#414141]">cm</p>
                         </div>
                         <div class="flex w-[50%]">
-                            <input type="text" placeholder="b" class="input bg-[#f1f1f1]  rounded-none hover:border-none mr-[5px] input-xs w-full" />
+                            <input type="text" placeholder="b" class="input bg-[#f1f1f1]  rounded-none border-0 mr-[5px] input-xs w-full" />
                             <p class="font-normal text-[16px] text-[#414141]">cm</p>
                         </div>
                     </div>
@@ -144,17 +144,17 @@
             <div class="card border-2 border-[#1111111c]">
                 <figure class="w-full pt-[20px] px-[20px] h-[206px]"><img src="/resource/images/ellipse.png" alt="Shoes" /></figure>
                 <div class="card-body items-center">
-                    <h2 class="card-title font-bold text-[25px] text-[#414141]">Triangle</h2>
+                    <h2 class="card-title font-bold text-[25px] text-[#414141]">Ellipse</h2>
                     <div class="font-normal text-[16px] text-[#414141]">
                          Area(A) = 0.5 x <span>a</span> x <span>b</span> 
                     </div>
                     <div class="flex gap-[20px] mx-[20px] md:mx-[0px] lg:mx-[20px]">
                         <div class="flex w-[50%]">
-                            <input type="text" placeholder="a" class="input bg-[#f1f1f1] rounded-none mr-[5px] input-xs w-full" />
+                            <input type="text" placeholder="a" class="input bg-[#f1f1f1] rounded-none mr-[5px] input-xs w-full border-0" />
                             <p class="font-normal text-[16px] text-[#414141]">cm</p>
                         </div>
                         <div class="flex w-[50%]">
-                            <input type="text" placeholder="b" class="input bg-[#f1f1f1]  rounded-none hover:border-none mr-[5px] input-xs w-full" />
+                            <input type="text" placeholder="b" class="input bg-[#f1f1f1]  rounded-none border-0 mr-[5px] input-xs w-full" />
                             <p class="font-normal text-[16px] text-[#414141]">cm</p>
                         </div>
                     </div>
@@ -168,8 +168,11 @@
 
         
         <!-- Calculate Area Section Start -->
-        <div class="w-[40%] md:w-[30%]  ml-10 h-[430px] text-center border-2 border-[#1111111c1c] rounded-2xl">
+        <div class="w-[45%] md:w-[30%]  ml-10 h-[430px] text-center border-2 border-[#1111111c1c] rounded-2xl">
             <h1 class="font-bold text-[20px] text-[#1111111cc0]">Area Calculate <hr></h1>
+            <div id="calculate-result" class="grid grid-cols-1 lg:grid-cols-2 lg:gap-[5px]">  
+
+            </div>
         </div>
         <!-- Calculate Area Section End -->
 
