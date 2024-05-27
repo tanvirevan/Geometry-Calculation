@@ -67,6 +67,7 @@
             const calculateResultField = document.getElementById('calculate-result');
             let showCalculation;
             const Name = document.getElementById(id);
+
             if(isNaN(value))
                 {
                     showCalculation =`<p class="font-bold text-red-600 flex justify-center items-center">Place Fixed the Error!!!</p>`;
@@ -81,17 +82,17 @@
                     const count = calculateResultField.childElementCount;
                     showCalculation = `
                     <div class="flex justify-start mt-[10px] items-center">
-                        <p class="font-normal text-[16px] mr-[8px]">${count+1}. ${Name.innerText}</p>
-                        <p class="font-normal text-[16px] mr-[8px]">${Area}cm<sup>2</sup></p>
+                        <p class="font-normal text-[16px] mr-[5px]">${count+1}.${Name.innerText}</p>
+                        <p class="font-normal text-[16px] mr-[5px]">${Area}<spen class="text-[#1090d8]"> cm</spen><sup class="text-[#1090d8]">2</sup></p>
                         <p class= "mr-[8px]"><i class="fa-solid fa-arrow-right"></i></p>
-                        <button class="btn btn-sm mr-[8px] bg-[#1090d8] hover:bg-[#1090d8] text-[#ffffff] font-medium text-[14px]">m<sup>2</sup></button>
+                        <button class="btn btn-sm mr-[8px] bg-[#1090d8] hover:bg-[#1090d8] text-[#ffffff] font-medium text-[14px]"> m<sup>2</sup></button>
                     </div>
                     `;
                     calculateResultField.innerHTML += showCalculation;
                 }
             
         }
-
+    
 // Triangle Funtion Start......
 function triangleAreaCalculation()
     {
@@ -160,4 +161,18 @@ function pentagonAreaCalculation()
         const Area =(1/4 * Math.sqrt(5*(5+ 2*Math.sqrt(5))*Math.pow(a,2))).toFixed(2);
 
         pentagonCalculateSet(a, Area, 'penagon-name');
+    }
+// Pentagon Function End
+
+// Ellipse Function Start
+function ellipseAreaCalculation()
+    {
+        // Get value from a input field
+            const a = getSet('eli-a', 'eli-a-value', 'a');
+        // Get value from b input field
+            const b = getSet('eli-b', 'eli-b-value', 'b');
+
+        // Call Calculate Function
+            const Area = (3.1416*a*b);
+            areaCalculateSet(a, b, Area, 'elli-name');
     }
